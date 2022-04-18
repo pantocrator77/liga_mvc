@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/clubs', [ClubController::class, 'clubs']);
-Route::get('/teams', [TeamController::class, 'teams']);
-Route::get('/teams', 'app\Http\Controllers\TeamController@teams');
+//Route::get('clubs', [ClubController::class, 'clubs']);
+//Route::get('teams', [TeamController::class, 'teams']);
+//Route::get('/teams', 'app\Http\Controllers\TeamController@teams');
+Route::get('teams', 'App\Http\Controllers\TeamController@teams');
+Route::get('clubs', 'App\Http\Controllers\ClubController@clubs');
