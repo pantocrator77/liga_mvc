@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\ClubController;
+use app\Http\Controllers\TeamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
+
+Route::get('/clubs', [ClubController::class, 'clubs']);
+Route::get('/teams', [TeamController::class, 'teams']);
+Route::get('/teams', 'app\Http\Controllers\TeamController@teams');
