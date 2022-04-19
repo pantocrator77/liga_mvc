@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class TeamController extends Controller
 {
     public function teams (){
-        return view ('teams');
+        $TeamName="Equipo A";
+        return view ('teams', compact('TeamName'));
     }
 }

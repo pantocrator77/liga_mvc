@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Esta es la homepage de los clubs</h1>
+    <p> {{ $ClubName }}</p>
 </body>
 </html>
