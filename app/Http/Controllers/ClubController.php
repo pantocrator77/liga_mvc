@@ -9,6 +9,6 @@ class ClubController extends Controller
 
     public function clubs (){
         $ClubName ="Equipo A";
-        return view ('clubs', compact('ClubName'));
+        return view ('clubs', compact('ClubName')); //
     }
 }
