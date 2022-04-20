@@ -6,7 +6,7 @@
     <title>Clubs homepage</title>
 </head>
 <body>
-    <h1>Esta es la homepage de los clubs</h1>
-    <p> {{ $ClubName }}</p>
+    <h1>Esta es la homepage de {{ $ClubName }}</h1>
+    <p> </p>
 </body>
 </html>

@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 //Route::get('clubs', [ClubController::class, 'clubs']);
 //Route::get('teams', [TeamController::class, 'teams']);
-
+Route::get('home', 'App\Http\Controllers\ClubController@clubs');
 Route::get('teams', 'App\Http\Controllers\TeamController@teams');
-Route::get('clubs', 'App\Http\Controllers\ClubController@clubs');
+Route::get('', 'ImagesController@logo');
+//Route::get('clubs', 'App\Http\Controllers\ClubController@clubs');
