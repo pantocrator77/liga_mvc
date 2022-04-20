@@ -8,6 +8,10 @@
 </head>
 <body>
     <h1>Esta es la homepage de {{ $ClubName }}</h1>
-    <p> </p>
+    
+    <p> <a href ="">{{ $Team1  }}</a></p>
+    <p> <a href ="">{{ $Team2  }}</a></p>
+    <p> <a href ="">{{ $Team3  }}</a></p>
+    <p> <a href ="">{{ $Team4  }}</a></p>
 </body>
 </html>
