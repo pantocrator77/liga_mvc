@@ -22,11 +22,3 @@ Route::get('/', function () {
 //Route::get('teams', [TeamController::class, 'teams']);
 Route::get('home', 'App\Http\Controllers\ClubController@clubs');
 Route::get('teams', 'App\Http\Controllers\TeamController@teams');
-<<<<<<< HEAD
-
-=======
-Route::get('', 'ImagesController@logo');
-Route::post('/newteam', function(){
-    //registrar nuevo equipo
-})->name ('newteam');
->>>>>>> 3bf9d31ae9402a7fc20a761dc85c7f0d6f9ec15f
