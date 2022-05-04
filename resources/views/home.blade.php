@@ -9,10 +9,16 @@
 <body>
     <h1>Esta es la homepage de {{ $ClubName }}</h1>
     
+<<<<<<< HEAD
 
  
     <p> <a href ="teams">{{ $Team1  }}</a></p>
     <p> <a href ="teams">{{ $Team2  }}</a></p>
+=======
+    <p> <a href ="">{{ $Team1  }}</a></p>
+    <p><a href="{{url('teams')}}">{{ $Team1  }}</a> 
+    <p> <a href ="">{{ $Team2  }}</a></p>
+>>>>>>> 3bf9d31ae9402a7fc20a761dc85c7f0d6f9ec15f
     <p> <a href ="">{{ $Team3  }}</a></p>
     <p> <a href ="">{{ $Team4  }}</a></p>
 </body>
