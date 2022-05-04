@@ -10,9 +10,9 @@
     <h1>Esta es la homepage de {{ $ClubName }}</h1>
     
 
-    @foreach ($data as $team)
+ 
     <p> <a href ="teams">{{ $Team1  }}</a></p>
-    <p> <a href ="">{{ $Team2  }}</a></p>
+    <p> <a href ="teams">{{ $Team2  }}</a></p>
     <p> <a href ="">{{ $Team3  }}</a></p>
     <p> <a href ="">{{ $Team4  }}</a></p>
 </body>

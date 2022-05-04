@@ -22,8 +22,4 @@ Route::get('/', function () {
 //Route::get('teams', [TeamController::class, 'teams']);
 Route::get('home', 'App\Http\Controllers\ClubController@clubs');
 Route::get('teams', 'App\Http\Controllers\TeamController@teams');
-<<<<<<< HEAD
-Route::get('', 'App\Http\Controllers\ImagesController@logo');
-=======
-Route::get('', 'ImagesController@logo');
->>>>>>> e4e05cb6cc6ed1c5b1f82058258b80a11675c4cb
+
