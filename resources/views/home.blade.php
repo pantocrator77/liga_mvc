@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homepage club {{ $ClubName ?? '' ?? '' }}</title>
-    <img src="/resources/views/img/club_logo.png">
+    <img src="{{ URL::to('/') }}/images/club_logo.jpg" >
 </head>
 <body>
     <h1>Esta es la homepage de {{ $ClubName }}</h1>
