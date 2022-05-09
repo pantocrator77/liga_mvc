@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('clubs', [ClubController::class, 'clubs']);
-//Route::get('teams', [TeamController::class, 'teams']);
-Route::get('home', 'App\Http\Controllers\ClubController@clubs');
-Route::get('teams', 'App\Http\Controllers\TeamController@teams');
+Route::get('home', 'App\Http\Controllers\ClubController@club')->name('vistaclub');
+Route::get('teams', 'App\Http\Controllers\TeamController@teams')->name('vistateam');
+Route::get('nuevopartido', 'App\Http\Controllers\GamesController@games')->name('vistagames');
+Route::POST('nuevopartido', 'App\Http\Controllers\GamesController@storegames')->name('storegames');

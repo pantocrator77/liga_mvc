@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class TeamController extends Controller
 {
     public function teams (){
-        $TeamName="Equipo A";
-        return view ('teams', compact('TeamName'));
+        $TeamName="Girona feminino";
+        $coach="liga.team.coach";
+        return view ('teams', compact('TeamName', 'coach'));
     }
 }
