@@ -16,11 +16,11 @@ class CreateGamesTable extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string('team_A');
-            $table->string('score_A');
+            $table->unsignedInteger('score_A')->default(0);
             $table->string('team_B');
-            $table->string('score_B');
-
-
+            $table->unsignedInteger('score_B')->default(0);
+            /**$table->foreign('team_A','team_B')->references('name')->on('teams')->OnUpdate('cascade')->OnDelete('cascade');
+            $table->foreign('team_A','team_B')->references('name')->on('teams')->OnUpdate('cascade')->OnDelete('cascade');*/
             $table->timestamps();
         });
     }

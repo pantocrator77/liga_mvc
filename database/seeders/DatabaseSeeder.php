@@ -19,9 +19,14 @@ class DatabaseSeeder extends Seeder
         $Club -> address= 'calle Balmes 133, Girona';
         $Club -> save();
 
-        $Club = new Club();
+        $Club2 = new Club();
         $Club -> name = 'Tarragona futbol club';
-        $Club -> address= 'carrer Rossello 124, tarragona';
+        $Club -> address= 'carrer Rossello 124, Tarragona';
+        $Club -> save();
+
+        $Club3 = new Club();
+        $Club -> name = 'Reus futbol club';
+        $Club -> address= 'carrer valencia 124, Reus';
         $Club -> save();
     }
 }
