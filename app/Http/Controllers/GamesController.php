@@ -25,6 +25,6 @@ class GamesController extends Controller
         $game->team_B = $request->EquipoB;
         $game->score_B = $request->golB;
         $game->save();
-        return Redirect('teams');
+        return Redirect()->route('teams');
     }
 }

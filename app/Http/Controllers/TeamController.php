@@ -13,8 +13,8 @@ class TeamController extends Controller
         $TeamName="Girona feminino";
         $coach="liga.team.coach";
         $games = game::all();
-        //return view ('teams', compact('$TeamName', '$coach', '$games'));
-        return $games;
+        return view ('teams', compact('TeamName', 'coach', 'games'));
+        //return $games;
     }
     public function addteam (request $request){
         //return $request->all();
