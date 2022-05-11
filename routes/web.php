@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 use app\Http\Controllers\ClubController;
 use app\Http\Controllers\TeamController;
+use app\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,5 @@ Route::get('nuevopartido', 'App\Http\Controllers\GamesController@games')->name('
 Route::POST('nuevopartido', 'App\Http\Controllers\GamesController@storegames')->name('storegames');
 Route::get('nuevoequipo', 'App\Http\Controllers\TeamController@formteam')->name('vistaaddteam');
 Route::POST('nuevoequipo', 'App\Http\Controllers\TeamController@addteam')->name('nuevoequipo');
+/**Route::get('home', function() {return View::make('home');});
+Route::get('teams', function() {return View::make('teams');});*/

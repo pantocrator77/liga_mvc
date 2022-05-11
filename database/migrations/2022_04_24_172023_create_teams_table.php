@@ -17,6 +17,7 @@ class CreateTeamsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
+            $table->string('club');
             $table->string('entrenador');
             $table->string('cat');
         });

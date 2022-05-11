@@ -6,11 +6,13 @@
     <title>Teams homepage</title>
 </head>
 <body>
-    <h1>Esta es la homepage de {{ $TeamName }}</h1>
+    <h1>Esta es la homepage de {{ $TeamName ?? '' }}</h1>
     <br>
-    <h4>Entrenador: {{ $coach }}</h4>
+    <h4>Entrenador: {{ $coach ?? '' }}</h4>
     <br>
     <h2>Resultados</h2>
+    <br>
+    <p>{{$games ?? ''}}</p>
     <a href="/nuevopartido">Añadir resultado</a>
 
     <p> 

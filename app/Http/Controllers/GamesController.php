@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Game;
+use App\Models\Team;
 
 class GamesController extends Controller
 {
@@ -12,6 +13,10 @@ class GamesController extends Controller
         $coach="liga.team.coach";
         return view ('nuevopartido');
     }
+    public function back_teams()
+{
+    return view('teams');
+}
     public function storegames (request $request){
         //return $request->all();
         $game = new Game();
@@ -20,5 +25,6 @@ class GamesController extends Controller
         $game->team_B = $request->EquipoB;
         $game->score_B = $request->golB;
         $game->save();
+        return Redirect('teams');
     }
 }

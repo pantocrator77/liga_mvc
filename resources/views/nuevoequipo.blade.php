@@ -11,7 +11,9 @@
     <h2>Nuevo equipo</h2>
     <form action="{{route('nuevoequipo')}}" method="POST">
         @csrf
-        <label>nombre <input type="text" name="name"></label>
+        <label>Nombre equipo<input type="text" name="name"></label>
+        <br>
+        <label>Club <input type="text" name="club"></label>
         <br>
         <label>entrenador <input type="text" name="entrenador"></label>
         <br>

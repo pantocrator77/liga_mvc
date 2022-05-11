@@ -18,4 +18,8 @@ class Team extends Model
     public function teamBgames(){
         return $this->hasMany(games::class, 'name');
     }
+    public function team_club(){
+        return $this->belongsTo(Clubs::class);
+    }
+
 }
