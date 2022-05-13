@@ -13,12 +13,9 @@ class TeamController extends Controller
     public function teams (){
         $TeamName="Girona feminino";
         $coach="liga.team.coach";
-        //$games = game::all();
-
-        //
         $games = DB::table('games')
-            ->where ('team_A', 'girona feminino')  
-            ->orWhere('team_B', 'girona femenino')
+            ->where ('team_A', 'girona')  
+            ->orWhere('team_B', 'girona')
             ->get();
 
         foreach ($games as $game) {
