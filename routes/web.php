@@ -21,10 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('home', 'App\Http\Controllers\ClubController@club')->name('vistaclub');
-Route::get('teams', 'App\Http\Controllers\TeamController@teams')->name('vistateam');
+Route::get('teams', 'App\Http\Controllers\TeamController@teams')->name('teams');
 Route::get('nuevopartido', 'App\Http\Controllers\GamesController@games')->name('vistagames');
 Route::POST('nuevopartido', 'App\Http\Controllers\GamesController@storegames')->name('storegames');
 Route::get('nuevoequipo', 'App\Http\Controllers\TeamController@formteam')->name('vistaaddteam');
 Route::POST('nuevoequipo', 'App\Http\Controllers\TeamController@addteam')->name('nuevoequipo');
-/**Route::get('home', function() {return View::make('home');});
-Route::get('teams', function() {return View::make('teams');});*/

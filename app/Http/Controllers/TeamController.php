@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 
 use Illuminate\Http\Request;
@@ -12,7 +13,26 @@ class TeamController extends Controller
     public function teams (){
         $TeamName="Girona feminino";
         $coach="liga.team.coach";
-        $games = game::all();
+        //$games = game::all();
+
+        //
+        $games = DB::table('games')
+            ->where ('team_A', 'girona feminino')  
+            ->orWhere('team_B', 'girona femenino')
+            ->get();
+
+        foreach ($games as $game) {
+            echo $game->team_A;
+            echo " vs ";
+            echo $game->team_B;
+            echo " = ";
+            echo $game->score_A;
+            echo " : ";
+            echo $game->score_B;
+            echo "<br>";
+}
+        //
+
         return view ('teams', compact('TeamName', 'coach', 'games'));
         //return $games;
     }
