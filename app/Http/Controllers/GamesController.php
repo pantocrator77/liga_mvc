@@ -13,10 +13,7 @@ class GamesController extends Controller
         $coach="liga.team.coach";
         return view ('nuevopartido');
     }
-    public function back_teams()
-{
-    return view('teams');
-}
+
     public function storegames (request $request){
         //return $request->all();
         $game = new Game();
@@ -25,6 +22,6 @@ class GamesController extends Controller
         $game->team_B = $request->EquipoB;
         $game->score_B = $request->golB;
         $game->save();
-        return Redirect()->route('teams');
+        return Redirect()->route('vistateams');
     }
 }

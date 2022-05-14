@@ -11,24 +11,12 @@ use App\Models\Game;
 class TeamController extends Controller
 {
     public function teams (){
-        $TeamName="Girona feminino";
+        $TeamName="tarragona masculino A";
         $coach="liga.team.coach";
         $games = DB::table('games')
-            ->where ('team_A', 'girona')  
-            ->orWhere('team_B', 'girona')
+            ->where ('team_A', $TeamName)  
+            ->orWhere('team_B', $TeamName)
             ->get();
-
-        foreach ($games as $game) {
-            echo $game->team_A;
-            echo " vs ";
-            echo $game->team_B;
-            echo " = ";
-            echo $game->score_A;
-            echo " : ";
-            echo $game->score_B;
-            echo "<br>";
-}
-        //
 
         return view ('teams', compact('TeamName', 'coach', 'games'));
         //return $games;

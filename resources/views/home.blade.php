@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -6,8 +7,8 @@
     <title>Homepage club {{ $ClubName ?? '' }}</title>
     
 </head>
-<body>
-<div class="flex flex-row  justify-center m-10 bg-gray-light">
+<body class="bg-yellow">
+<div class="flex flex-row  justify-center m-50 bg-gray-light">
     <div class="basis-1/4"><img src="{{ URL::to('/') }}/images/club_logo.png" ></div>
     <div class="basis-3/4 flex items-center b"><h1 class="text-3xl font-bold underline">Esta es la homepage de {{ $ClubName ?? '' }}</h1></div>
 </div>
@@ -16,12 +17,25 @@
 <div class="bg-gray-300">
     <p> <a href ="">{{ $teams ?? '' }}</a></p>
     <br>
+ 
+    <ul class="flex flex-row">
+       @foreach ($team_club as $team_club)
+       <li class="basis-1/4 border-8">
+        <span class="bg-gray-light"> <a href="{{ url('/$team_club->name/') }}">{{$team_club->name}} </a></span>
+        </li>
+       
+       @endforeach
+        
+    </ul>
+ <br>
+ <br>
     <button class="text-2 font-bold underline">
     <a href="/nuevoequipo">Añadir un nuevo equipo</a>
 </button>
 </div>
     
     <h2>Resultados</h2>
+
     <p> </p>
     <button class="bg-cyan-500 hover:bg-cyan-600">Subscribe</button>
     
