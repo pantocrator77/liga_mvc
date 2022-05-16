@@ -20,7 +20,7 @@
     <br>
  
     <ul class="inline-flex">
-       @foreach ($team_club as $team_club)
+       @foreach ($team_club as $team)
        <li class="">
         <span class="bg-slate-200 border-solid border-1 border-slate-600 p-4 ml-2 block grid gap-4 grid-cols-3 grid-rows-1"> <a href="{{ route('vistateams', $team_club->name) }}">{{$team_club->name}} </a></span>
         </li>

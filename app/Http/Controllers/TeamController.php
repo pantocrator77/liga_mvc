@@ -38,7 +38,4 @@ class TeamController extends Controller
         return view ('select_teams', compact('TeamName', 'coach', 'games', 'team_club'));
     }
 
-    public function select_teams_2 (Request $request, $team_club){
-        dd($team_club->name);
-    }
 }
