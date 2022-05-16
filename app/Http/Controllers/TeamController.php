@@ -37,5 +37,19 @@ class TeamController extends Controller
         $team_club = Team::find($Name);
         return view ('select_teams', compact('TeamName', 'coach', 'games', 'team_club'));
     }
+    public function select_team2 (Request $request){
+        $path = $request->getPathInfo();
+        $arr = explode('/', $path);
+        $id=($arr [2]);
+        $team_Club = new Team();
+        $team_club = Team::find($id);
+        $TeamName = $team_club->name;
+        $coach=$team_club->entrenador;
+        $games = game::where('team_A', $TeamName)->orWhere('team_B', $TeamName)->paginate(5); //Show games of the team and paginate them
+       
+        return view ('teams', compact('TeamName', 'coach', 'games', 'team_club'));
+        //return view ('teams', compact( 'team_club'));
+
+    }
 
 }

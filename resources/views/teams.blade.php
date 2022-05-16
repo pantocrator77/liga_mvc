@@ -12,10 +12,10 @@
 <body class="bg-slate-100">
 <div class="flex flex-row  justify-center bg-slate-400 border-solid border-2 border-slate-600 p-6">
     <div class="basis-1/4"><img src="{{ URL::to('/') }}/images/club_logo.png" ></div>
-    <div class="basis-3/4 flex items-center"><h1 class="text-3xl font-bold underline">Esta es la homepage de </h1></div>
+    <div class="basis-3/4 flex items-center"><h1 class="text-3xl font-bold underline">Esta es la homepage de {{ $TeamName  }}</h1></div>
 </div>
     <br>
-    <h4>Entrenador: {{ $coach ?? '' }}</h4>
+    <h4>Entrenador: {{ $coach  }}</h4>
     <br>
     <h2 class="text-2xl font-bold underline">Resultados</h2>
     <br>
@@ -29,7 +29,7 @@
     </ul>
     </div>
         
-   {{$games ->links()}}
+   {{$games  ->links()}}
 
     <a href="/nuevopartido">Añadir resultado</a>
 
