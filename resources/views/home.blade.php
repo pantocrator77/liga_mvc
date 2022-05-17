@@ -10,19 +10,18 @@
 </head>
 <body class="bg-slate-100">
 <div class="flex flex-row justify-center bg-slate-400 border-solid border-2 border-slate-600 p-6">
-    <div class="basis-1/4"><img src="{{ URL::to('/') }}/images/club_logo.png" ></div>
+    <div class="basis-1/4"><a href="/home"><img src="{{ URL::to('/') }}/images/club_logo.png" ></a></div>
     <div class="basis-3/4 flex items-center b"><h1 class="text-3xl font-bold underline">Esta es la homepage de {{ $ClubName ?? '' }}</h1></div>
 </div>
 <br>
 <br>
-<div class="">
-    <!-- <p> <a href ="flex flex-row jutify-right">{{ $teams ?? '' }}</a></p> -->
+<div class="w-1/2 place-content-right ml-80">
     <br>
  
-    <ul class="inline-flex">
+    <ul class="flex items-center flex-wrap grid grid-cols-4 gap-3 place-items-stretch">
        @foreach ($teams as $team)
        <li class="">
-        <span class="bg-slate-200 border-solid border-1 border-slate-600 p-4 ml-2 block grid gap-4 grid-cols-3 grid-rows-1"> <a href="{{  URL::to('teams/'. $team->id) }}">{{$team->name}} </a></span>
+        <button class="bg-slate-200  hover:bg-slate-300 border-solid border-2 border-slate-400 p-4 m-2 block grid w-70 h-20"> <a href="{{  URL::to('teams/'. $team->id) }}">{{$team->name}} </a></button>
         </li>
 
        @endforeach
@@ -32,11 +31,11 @@
  <br>
  <br>
     <button class="text-2 font-bold underline">
-    <a href="/nuevoequipo"><button class="bg-cyan-500 hover:bg-cyan-600 p-3">Añadir un nuevo equipo</button></a>
+    <a href="/nuevoequipo"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-10">Añadir un nuevo equipo</button></a>
 </button>
 </div>
     
-    <h2>Resultados</h2>
+
 
     <p> </p>
     

@@ -32,24 +32,24 @@ class TeamController extends Controller
         $clubname ="Girona";
         return view ('nuevoequipo');
     }
-    public function select_team ($Name){
+    /* public function select_team ($Name){
         $team_Club = new Team();
         $team_club = Team::find($Name);
         return view ('select_teams', compact('TeamName', 'coach', 'games', 'team_club'));
-    }
+    } */
     public function select_team2 (Request $request){
-        $path = $request->getPathInfo();
-        $arr = explode('/', $path);
-        $id=($arr [2]);
+        $request->flash();
+        $path = $request->getPathInfo(); //get request path
+        $arr = explode('/', $path); //divide full puth into array
+        $id=($arr [2]); //get element 2 of array (id)
         $team_Club = new Team();
-        $team_club = Team::find($id);
+        $team_club = Team::find($id); //find team with id
         $TeamName = $team_club->name;
         $coach=$team_club->entrenador;
+        $id=$team_club->id;
         $games = game::where('team_A', $TeamName)->orWhere('team_B', $TeamName)->paginate(5); //Show games of the team and paginate them
-       
-        return view ('teams', compact('TeamName', 'coach', 'games', 'team_club'));
-        //return view ('teams', compact( 'team_club'));
+        return view ('teams', compact('TeamName', 'coach', 'games', 'team_club', 'id'));
+
 
     }
-
 }

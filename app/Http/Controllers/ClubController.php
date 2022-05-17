@@ -10,7 +10,7 @@ class ClubController extends Controller
 {
 
     public function club(Request $request){
-             $ClubName="Club deportivo Girona";//$teams=Team::all(); //cambiar a SELECT WHERE ID IS "club"
+             $ClubName="Club deportivo Girona";
              $teams = DB::table('teams')
              ->where ('club', 'Girona')  
              ->get();

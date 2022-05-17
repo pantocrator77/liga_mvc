@@ -8,10 +8,9 @@
 <script src="{{ asset('js/app.js') }}"></script>
     <title>Teams homepage</title>
 </head>
-
 <body class="bg-slate-100">
 <div class="flex flex-row  justify-center bg-slate-400 border-solid border-2 border-slate-600 p-6">
-    <div class="basis-1/4"><img src="{{ URL::to('/') }}/images/club_logo.png" ></div>
+<div class="basis-1/4"><a href="/home"><img src="{{ URL::to('/') }}/images/club_logo.png" ></a></div>
     <div class="basis-3/4 flex items-center"><h1 class="text-3xl font-bold underline">Esta es la homepage de {{ $TeamName  }}</h1></div>
 </div>
     <br>
@@ -29,13 +28,10 @@
     </ul>
     </div>
         
-   {{$games  ->links()}}
-
-    <a href="/nuevopartido">Añadir resultado</a>
-
-    <p> 
-        
-    </p>
-
+   
+    <br>
+   {{$games->links()}}
+   
+     <a href="/nuevopartido"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-10">Añadir resultado</button></a>
 </body>
 </html>

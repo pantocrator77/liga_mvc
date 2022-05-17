@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Game;
 use App\Models\Team;
+use App\Http\Controllers\TeamController;
+use Illuminate\Support\Facades;
 
 class GamesController extends Controller
 {
@@ -15,13 +17,18 @@ class GamesController extends Controller
     }
 
     public function storegames (request $request){
-        //return $request->all();
+
         $game = new Game();
         $game->team_A = $request->EquipoA;
         $game->score_A = $request->golA;
         $game->team_B = $request->EquipoB;
         $game->score_B = $request->golB;
         $game->save();
-        return Redirect()->route('vistateams');
+        return back();
+         /*return redirect ()->route('select_team2');
+        return Redirect()->route('select_team2::id');
+        return redirect()->back();
+        return back(); */
     }
+    
 }

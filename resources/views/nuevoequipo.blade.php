@@ -10,7 +10,7 @@
 </head>
 <body class="bg-slate-100">
 <div class="flex flex-row justify-center bg-slate-400 border-solid border-2 border-slate-600 p-6">
-    <div class="basis-1/4"><img src="{{ URL::to('/') }}/images/club_logo.png" ></div>
+<div class="basis-1/4"><a href="/home"><img src="{{ URL::to('/') }}/images/club_logo.png" ></a></div>
     <div class="basis-3/4 flex items-center b"><h1 class="text-3xl font-bold underline">Esta es la homepage de {{ $ClubName ?? '' }}</h1></div>
 </div>
     <h1 class="text-2xl font-bold underline">agregar equipo</h1>
