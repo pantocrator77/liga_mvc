@@ -31,7 +31,9 @@
    
     <br>
    {{$games->links()}}
+
+   {{ '/nuevopartido?id='.explode('/',Request::url())[4]}}
    
-     <a href="/nuevopartido"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-10">Añadir resultado</button></a>
+     <a href="{{'/nuevopartido?id='.explode('/',Request::url())[4]}}"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-10">Añadir resultado</button></a>
 </body>
 </html>

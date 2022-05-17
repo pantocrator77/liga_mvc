@@ -40,10 +40,8 @@
         <br>
         <br>
         <br>
-
-
-        <button type="submit"> Enviar</button>
+        <button type="submit"> Enviar</button> 
     </form>
-  
+    <a href="{{'/teams/'.Request::get('id')}}"> volver </a>
 </body>
 </html>

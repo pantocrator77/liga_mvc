@@ -29,7 +29,7 @@ class GamesController extends Controller
         $game->team_B = $request->EquipoB;
         $game->score_B = $request->golB;
         $game->save();
-        return back();
+        /* return back(); */
          /*return redirect ()->route('select_team2');
         return Redirect()->route('select_team2::id');
         return redirect()->back();
