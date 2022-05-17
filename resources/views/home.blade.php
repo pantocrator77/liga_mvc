@@ -31,13 +31,17 @@
  <br>
  <br>
     <button class="text-2 font-bold underline">
-    <a href="/nuevoequipo"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-10">Añadir un nuevo equipo</button></a>
+    <a href="/nuevoequipo"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-2">Añadir un nuevo equipo</button></a> 
+    <a href="/nuevopartido"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-2">Añadir resultado</button></a>
 </button>
 </div>
     
+@foreach ($games as $game)
+  
+  <li>{{$game->team_A}}   vs   {{$game->team_B}} =      {{$game->score_A}} :  {{$game->score_B}}</li>
+  <br>
+@endforeach
 
-
-    <p> </p>
     
     
 </body>

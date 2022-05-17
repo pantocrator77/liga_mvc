@@ -20,20 +20,30 @@
 
     <form action="{{route('storegames')}}" method="POST">
         @csrf
-        <label>Equipo A: <input type="text" name="EquipoA"></label>
-        <label>goles: <input type="text" name="golA"></label>
+
+      
+    <option>Select Team A</option>
+    <select name="EquipoA" id="teams" class="category">
+        @foreach($teams as $team)
+        <option value="{{ $team->id }}">{{ $team->name}}</option>
+    @endforeach
+    </select> 
+    <label>goles: <input type="text" name="golA"></label>
         <br>
-        <label>Equipo B: <input type="text" name="EquipoB"></label>
-        <label>goles: <input type="text" name="golB"></label>
+        <option>Select Team B</option>
+    <select name="EquipoB" id="teams" class="category">
+        @foreach($teams as $team)
+        <option value="{{ $team->id }}">{{ $team->name}}</option>
+    @endforeach
+    </select> 
+    <label>goles: <input type="text" name="golB"></label>
         <br>
         <br>
+        <br>
+
+
         <button type="submit"> Enviar</button>
     </form>
-    
-
-    <p> 
- 
-        
-    </p>
+  
 </body>
 </html>

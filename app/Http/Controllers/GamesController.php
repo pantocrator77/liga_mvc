@@ -7,17 +7,22 @@ use App\Models\Game;
 use App\Models\Team;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades;
+use Illuminate\Support\Facades\DB;
 
 class GamesController extends Controller
 {
     public function games (){
+        $teams = DB::table('teams')
+             ->get();
+         return view ('nuevopartido', compact ('teams'));
+
         $TeamName="Girona feminino";
         $coach="liga.team.coach";
         return view ('nuevopartido');
     }
 
     public function storegames (request $request){
-
+        
         $game = new Game();
         $game->team_A = $request->EquipoA;
         $game->score_A = $request->golA;

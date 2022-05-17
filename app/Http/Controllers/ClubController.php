@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Team;
+use App\Models\Game;
 use Illuminate\Support\Facades\DB;
+
 
 class ClubController extends Controller
 {
@@ -14,7 +16,10 @@ class ClubController extends Controller
              $teams = DB::table('teams')
              ->where ('club', 'Girona')  
              ->get();
-         return view ('home', compact ('ClubName','teams'));
+            $TeamName="Girona";
+             $games = game::where('team_A', $TeamName)->orWhere('team_B', $TeamName)->paginate(5) //Show games of the team and paginate them 
+             ->get();
+         return view ('home', compact ('ClubName','teams', 'games'));
 
     }
 
