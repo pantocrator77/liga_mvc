@@ -36,11 +36,7 @@
 </button>
 </div>
     
-@foreach ($games as $game)
-  
-  <li>{{$game->team_A}}   vs   {{$game->team_B}} =      {{$game->score_A}} :  {{$game->score_B}}</li>
-  <br>
-@endforeach
+
 
     
     
