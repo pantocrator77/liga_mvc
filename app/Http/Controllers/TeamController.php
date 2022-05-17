@@ -32,11 +32,6 @@ class TeamController extends Controller
         $clubname ="Girona";
         return view ('nuevoequipo');
     }
-    /* public function select_team ($Name){
-        $team_Club = new Team();
-        $team_club = Team::find($Name);
-        return view ('select_teams', compact('TeamName', 'coach', 'games', 'team_club'));
-    } */
     public function select_team2 (Request $request){
         $request->flash();
         $path = $request->getPathInfo(); //get request path
@@ -49,7 +44,5 @@ class TeamController extends Controller
         $id=$team_club->id;
         $games = game::where('team_A', $TeamName)->orWhere('team_B', $TeamName)->paginate(5); //Show games of the team and paginate them
         return view ('teams', compact('TeamName', 'coach', 'games', 'team_club', 'id'));
-
-
     }
 }

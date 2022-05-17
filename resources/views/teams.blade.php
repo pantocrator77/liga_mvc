@@ -16,13 +16,13 @@
     <br>
     <h4>Entrenador: {{ $coach  }}</h4>
     <br>
-    <h2 class="text-2xl font-bold underline">Resultados</h2>
+    <h2 class="text-2xl font-bold underline">Ultimos partidos de este equipo</h2>
     <br>
-    <div class="flex flex-row  justify-left bg-gray-light">
+    <div class="bg-gray-light pt-5">
     <ul>
     @foreach ($games as $game)
   
-        <li>{{$game->team_A}}   vs   {{$game->team_B}} =      {{$game->score_A}} :  {{$game->score_B}}</li>
+        <li class="bg-slate-100 pl-10">{{$game->team_A}}   vs   {{$game->team_B}} =      {{$game->score_A}} :  {{$game->score_B}}</li>
         <br>
     @endforeach
     </ul>

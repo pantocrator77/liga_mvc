@@ -16,8 +16,11 @@ class ClubController extends Controller
              $teams = DB::table('teams')
              ->where ('club', 'Girona')  
              ->get();
-           
-         return view ('home', compact ('ClubName','teams'));
+            $TeamName="Girona";
+            $games=DB::table("games")
+            ->orderBy("id","desc")
+            ->paginate(10);
+         return view ('home', compact ('ClubName','teams', 'games'));
 
     }
 

@@ -35,10 +35,23 @@
     <a href="/nuevopartido"><button class="bg-cyan-500 hover:bg-cyan-600 p-3 ml-2">Añadir resultado</button></a>
 </button>
 </div>
-    
+<br>
+<br>
+<br>
+<div class="content-center">
+<h2 class="text-3xl font-bold underline justify-center ml-10"> Ultimos partidos de liga</h2></div>
+<br>
+<br>
+<br>
+ <div class="bg-gray-light pt-5" >  
+@foreach ($games as $game)
+  
+  <li class="bg-slate-100 pl-10">{{$game->team_A}}   vs   {{$game->team_B}} =      {{$game->score_A}} :  {{$game->score_B}}</li>
+ <br>
 
-
-    
+@endforeach
+{{$games->links()}}
+ </div>
     
 </body>
 </html>

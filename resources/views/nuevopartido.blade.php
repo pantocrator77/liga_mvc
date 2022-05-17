@@ -25,7 +25,7 @@
     <option>Select Team A</option>
     <select name="EquipoA" id="teams" class="category">
         @foreach($teams as $team)
-        <option value="{{ $team->id }}">{{ $team->name}}</option>
+        <option value="{{ $team->name }}">{{ $team->name}}</option>
     @endforeach
     </select> 
     <label>goles: <input type="text" name="golA"></label>
@@ -33,7 +33,7 @@
         <option>Select Team B</option>
     <select name="EquipoB" id="teams" class="category">
         @foreach($teams as $team)
-        <option value="{{ $team->id }}">{{ $team->name}}</option>
+        <option value="{{ $team->name }}">{{ $team->name}}</option>
     @endforeach
     </select> 
     <label>goles: <input type="text" name="golB"></label>
